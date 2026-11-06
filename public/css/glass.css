@@ -1,0 +1,426 @@
+:root {
+    --bg: #0a0a0a;
+    --panel: #272727ed;
+    --surface: #ffffff08;
+    --border: #e6e6e61c;
+    --muted: #aaaaaa;
+    --text: #f2f2f2;
+    --accent: #ffffff;
+    --mint: #c2c2c2;
+    --bs-primary: #ffffff;
+    --bs-primary-rgb: 255, 255, 255;
+    --bs-font-sans-serif: "Segoe UI", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+body {
+    background: radial-gradient(ellipse at 7% 22%, #5d5d5d65, transparent 48%),
+        radial-gradient(ellipse at 96% 75%, #5c5c5c40, transparent 48%), #131313;
+    background-attachment: fixed;
+}
+.app-header {
+    background: #1b1b1bbd;
+    border-bottom-color: #e6e6e61f;
+    backdrop-filter: blur(24px) saturate(0%);
+    -webkit-backdrop-filter: blur(24px) saturate(0%);
+}
+.brand > span {
+    font-weight: 550;
+    letter-spacing: -1.5px;
+}
+.brand-sub {
+    letter-spacing: 1.8px;
+}
+.project-header input {
+    color: var(--text);
+}
+.workspace-heading {
+    padding-top: 25px;
+    padding-bottom: 23px;
+}
+.eyebrow {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.6px;
+    font-weight: 500;
+}
+h1 {
+    font-size: 23px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+}
+h1 span {
+    font-size: 13px;
+    letter-spacing: 0;
+    margin-left: 12px;
+}
+.panel,
+.studio-dialog {
+    background: linear-gradient(145deg, #ffffff08, #ffffff00 55%), var(--panel);
+    border-color: #e6e6e626;
+    border-top-color: #f3f3f342;
+    border-radius: 15px;
+    box-shadow:
+        inset 0 1px 0 #ffffff06,
+        0 12px 32px #00000024;
+}
+@supports ((backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px))) {
+    .panel,
+    .studio-dialog {
+        background: linear-gradient(145deg, #ffffff09, #ffffff00 55%), #272727b8;
+        backdrop-filter: blur(24px) saturate(0%);
+        -webkit-backdrop-filter: blur(24px) saturate(0%);
+    }
+}
+.panel-heading {
+    background: #ffffff02;
+}
+.panel-heading h2 {
+    font-size: 12px;
+    font-weight: 500;
+}
+.step-chip {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: monospace;
+}
+.btn {
+    border-radius: 7px;
+    font-weight: 500;
+}
+.btn-primary {
+    --bs-btn-color: #222222;
+    --bs-btn-bg: #eeeeee;
+    --bs-btn-border-color: #eeeeee;
+    --bs-btn-hover-color: #222222;
+    --bs-btn-hover-bg: #ffffff;
+    --bs-btn-hover-border-color: #ffffff;
+    --bs-btn-active-color: #222222;
+    --bs-btn-active-bg: #cccccc;
+    --bs-btn-active-border-color: #cccccc;
+    --bs-btn-disabled-bg: #eeeeee;
+    --bs-btn-disabled-border-color: #eeeeee;
+    --bs-btn-disabled-color: #222222;
+    box-shadow:
+        inset 0 1px 0 #ffffff40,
+        0 3px 9px #00000022;
+}
+.btn-quiet {
+    color: #bcbcbc;
+}
+.btn-quiet:hover,
+.btn-quiet:active {
+    background: #ffffff0c !important;
+    color: #ffffff !important;
+}
+.btn-outline-secondary {
+    --bs-btn-color: #cacaca;
+    --bs-btn-border-color: #eeeeee;
+    --bs-btn-hover-bg: #ffffff;
+    --bs-btn-hover-border-color: #ffffff;
+    --bs-btn-hover-color: #ffffff;
+}
+.upload-zone {
+    background: #16161640;
+    border-color: #c9c9c93d;
+    border-radius: 10px;
+}
+.upload-zone:hover,
+.upload-zone.dragging {
+    background: #bfbfbf0c;
+    border-color: var(--accent);
+}
+.upload-symbol {
+    color: #d1d1d1;
+    background: #d1d1d10b;
+    border-color: #d1d1d124;
+    border-radius: 50%;
+}
+.upload-zone small,
+.artwork-upload small,
+.privacy-note span,
+.credit,
+.theme-card small,
+.timeline-scale,
+.trim-shortcuts,
+.studio-bottom-note,
+.app-footer {
+    color: #9e9e9e;
+}
+.file-card,
+.artwork-upload {
+    background: #ffffff04;
+    border-color: var(--border);
+}
+.file-symbol,
+.artwork-placeholder {
+    background: #e1e1e10b;
+    color: #cccccc;
+}
+.small-tag {
+    background: #ffffff07;
+    color: #b9b9b9;
+    font-weight: 400;
+}
+.field-label,
+.range-field > span,
+.toggle-field,
+.inline-color {
+    color: #c4c4c4;
+    font-size: 11px;
+}
+.form-control,
+.form-select,
+.clip-controls input {
+    background-color: #11111150;
+    border-color: #e6e6e621;
+    color: #ededed;
+}
+.form-control:focus,
+.form-select:focus {
+    background-color: #1c1c1c;
+    border-color: #c5c5c580;
+    color: #ffffff;
+}
+.form-control::placeholder {
+    color: #8e8e8e;
+}
+.form-select option {
+    background: #272727;
+    color: #f2f2f2;
+}
+.text-button,
+.artwork-link,
+.credit strong,
+.app-footer strong,
+.guide-credit strong {
+    color: var(--accent);
+}
+.text-button:hover {
+    color: #dcdcdc;
+}
+.privacy-note p {
+    color: #bfbfbf;
+}
+.credit span {
+    color: #adadad;
+}
+.resolution-badge,
+.range-field output,
+.clip-length,
+kbd,
+.app-footer b {
+    background: #ffffff07;
+    color: #c9c9c9;
+    border-color: var(--border);
+}
+.preview-stage {
+    background: #0f0f0fa6;
+    padding: 20px;
+}
+.canvas-wrap {
+    box-shadow: 0 12px 40px #00000055;
+}
+.preview-footer {
+    background: #0000000b;
+}
+.play-button {
+    background: #dcdcdc;
+    color: #303030;
+    box-shadow: inset 0 1px 0 #ffffff88;
+}
+.play-button:hover {
+    background: #f2f2f2;
+}
+.transport-secondary,
+.timecode > span,
+.clip-controls label,
+.clip-label {
+    color: #a8a8a8;
+}
+.form-range::-webkit-slider-runnable-track {
+    background: #d7d7d726;
+}
+.form-range::-webkit-slider-thumb {
+    background: #d8d8d8;
+    box-shadow: 0 0 0 3px #d8d8d809;
+}
+.form-range::-moz-range-track {
+    background: #d7d7d726;
+}
+.form-range::-moz-range-thumb {
+    background: #d8d8d8;
+}
+.waveform {
+    background: #0e0e0e4a;
+    color: #a6a6a6;
+}
+.waveform > svg {
+    fill: #a6a6a6;
+}
+.trim-shade {
+    background: #101010a6;
+}
+.trim-shade.start,
+.trim-shade.end {
+    border-color: var(--accent);
+}
+.playhead {
+    background: #d5d5d5;
+    box-shadow: 0 0 8px #bfbfbf55;
+}
+.theme-card.selected .theme-art {
+    border-color: #d9d9d9;
+}
+.theme-card:hover .theme-art {
+    border-color: #b2b2b2;
+}
+.theme-check {
+    background: #d9d9d9;
+    color: #2f2f2f;
+}
+.theme-card strong {
+    color: #c6c6c6;
+}
+.theme-card.selected strong {
+    color: #f1f1f1;
+}
+.editor-tabs {
+    background: #12121226;
+}
+.editor-tabs button {
+    color: #b0b0b0;
+}
+.editor-tabs button.active {
+    color: #d7d7d7;
+    border-bottom-color: #bfbfbf;
+}
+.editor-tabs button:hover {
+    color: #f2f2f2;
+}
+.controls-body {
+    scrollbar-color: #75757560 transparent;
+}
+.control-heading {
+    color: #e3e3e3;
+    font-weight: 500;
+}
+.visual-grid {
+    gap: 6px;
+}
+.visual-grid button {
+    height: 64px;
+    gap: 6px;
+    background: #ffffff03;
+    border-color: #e6e6e618;
+    color: #ababab;
+}
+.visual-grid button span {
+    color: #bcbcbc;
+}
+.visual-grid button.selected,
+.platform-list button.selected {
+    background: #bfbfbf0e;
+    border-color: #bfbfbf80;
+    color: #bfbfbf;
+    box-shadow: inset 0 1px 0 #ffffff09;
+}
+.visual-grid button.selected span {
+    color: #d7d7d7;
+}
+.visual-grid button:hover,
+.platform-list button:hover,
+.artwork-upload:hover {
+    border-color: #c5c5c560;
+}
+.toggle-field .form-check-input {
+    background-color: #d7d7d72b;
+}
+.toggle-field .form-check-input:checked {
+    background-color: #949494;
+}
+.encoder-status {
+    background: #17171740;
+    color: #b1b1b1;
+}
+.encoder-status.available {
+    color: #bdbdbd;
+}
+.color-grid input,
+.inline-color input {
+    background: #ffffff06;
+    border-color: var(--border);
+}
+.info-box {
+    background: #e6e6e605;
+    border-color: var(--border);
+    color: #c2c2c2;
+}
+.info-box p,
+.dialog-description,
+.guide-steps p {
+    color: #b8b8b8;
+}
+.info-box strong,
+.guide-steps strong {
+    color: #e7e7e7;
+}
+.platform-list button,
+.export-summary {
+    background: #ffffff04;
+    border-color: var(--border);
+}
+.platform-list small,
+.platform-list b {
+    color: #a7a7a7;
+}
+.studio-dialog {
+    background-color: #252525ed;
+}
+.studio-dialog::backdrop {
+    background: #0d0d0db3;
+}
+.dialog-icon {
+    background: #bfbfbf0c;
+    border-color: #bfbfbf30;
+    color: #bfbfbf;
+}
+.studio-dialog h2 {
+    font-weight: 500;
+}
+.progress {
+    background: #e6e6e618;
+}
+.progress-bar {
+    background: #c2c2c2;
+}
+.progress-heading,
+.guide-steps li {
+    color: #c2c2c2;
+}
+.studio-toast {
+    background: #2d2d2df2;
+    border-color: #9e9e9e60;
+    color: #e7e7e7;
+    backdrop-filter: blur(20px);
+}
+@media (max-width: 760px) {
+    h1 span {
+        margin-left: 0;
+        margin-top: 3px;
+        font-size: 12px;
+    }
+    .workspace-heading h1 {
+        font-size: 21px;
+    }
+    .preview-stage {
+        padding: 12px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
