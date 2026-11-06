@@ -26,8 +26,6 @@ The interface and browser dependencies are bundled. No account, API key, CDN, fr
 | Bass-triggered visual effects | Independent audio and video fades | Landscape, portrait, square, and custom sizes |
 | Three-band audio EQ | Portable projects and browser autosave | Local FFmpeg encoding |
 
-<img src="https://cdn.imgurl.ir/uploads/k56014_.png" alt="Prism logo" width="88">
-
 ## Features
 
 ### Audio-reactive design
